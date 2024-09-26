@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $# -ne 3 ]]; then
+    echo "Wrong number of arguments"
+    exit 1
+fi
+
 REMOTE_USER="$1"
 REMOTE_HOST="$2"
 REMOTE_COMMAND="$3"

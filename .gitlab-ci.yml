@@ -1,0 +1,10 @@
+default:
+  image: ubuntu:24.04
+
+stages:
+  - general-utilities-test
+
+general-utilities-test:
+  stage: general-utilities-test
+  script:
+    - ./general_utilities/run_tests.sh

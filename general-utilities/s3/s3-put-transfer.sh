@@ -15,7 +15,7 @@ fi
 
 S3_BUCKET="$1"
 S3_PREFIX="$2"
-LOCAL_DIRECTORY="$4"
+LOCAL_DIRECTORY="$3"
 LOCAL_FILE="$4"
 
 S3_FULL_PATH="s3://$S3_BUCKET/$S3_PREFIX"
@@ -23,5 +23,10 @@ LOCAL_FULL_PATH="$LOCAL_DIRECTORY/$LOCAL_FILE"
 
 
 
-      s3cmd put "$LOCAL_FULL_PATH $S3_FULL_PATH"
 
+if ! s3cmd put "$LOCAL_FULL_PATH $S3_FULL_PATH"; then
+      echo "Failed to download object $S3_OBJECT"
+      exit 1
+else
+      echo "Object $S3_OBJECT downloaded"
+fi

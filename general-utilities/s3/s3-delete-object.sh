@@ -16,7 +16,9 @@ S3_OBJECT="$3"
 
 S3_FULL_PATH="s3://$S3_BUCKET/$S3_PREFIX/$S3_OBJECT"
 
-
-      s3cmd del "$S3_FULL_PATH"
-
-
+if ! s3cmd del "$S3_FULL_PATH"; then
+      echo "Failed to delete object $S3_OBJECT"
+      exit 1
+else
+      echo "Object $S3_OBJECT deleted"
+fi

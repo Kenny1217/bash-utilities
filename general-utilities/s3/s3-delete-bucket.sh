@@ -14,9 +14,9 @@ S3_BUCKET="$1"
 
 S3_FULL_PATH="s3://$S3_BUCKET"
 
-
-
-
-
-      s3cmd rb "$S3_FULL_PATH"
-
+if ! s3cmd rb "$S3_FULL_PATH"; then
+      echo "Failed to delete bucket $S3_BUCKET"
+      exit 1
+else
+      echo "Bucket $S3_BUCKET deleted"
+fi

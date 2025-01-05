@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $# -ne 6 ]]; then
+    echo "Wrong number of arguments"
+    exit 1
+fi
+
 SFTP_USER="$1"
 SFTP_HOST="$2"
 REMOTE_DIRECTORY="$3"

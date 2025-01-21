@@ -14,6 +14,11 @@ GIT_REPO="$1"
 GIT_BRANCH="$2"
 GIT_CLONE_TRIES=0
 GIT_CLONE_MAX_TRIES=3
+LOCAL_DIRECTORY="$3"
+
+echo "Changing directory to $LOCAL_DIRECTORY"
+
+cd "$LOCAL_DIRECTORY"
 
 echo "Attempting to clone branch $GIT_BRANCH from $GIT_REPO"
 

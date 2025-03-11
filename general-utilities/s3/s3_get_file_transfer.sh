@@ -5,6 +5,11 @@ if ! command -v s3cmd &> /dev/null; then
     exit 1
 fi
 
+if [[ $# -ne 5 ]]; then
+    echo "Wrong number of arguments"
+    exit 1
+fi
+
 S3_BUCKET="$1"
 S3_PREFIX="$2"
 S3_OBJECT="$3"

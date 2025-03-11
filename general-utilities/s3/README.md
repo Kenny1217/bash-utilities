@@ -22,6 +22,21 @@ This script deletes a bucket in an S3 instance.
 bash ./s3_delete_bucket.sh <S3_BUCKET>
 ```
 
+### 3. `s3_get_file_transfer.sh`
+
+This script is used to get a file from an S3 bucket.
+
+#### Usage:
+```
+bash ./s3_get_file_transfer.sh <S3_BUCKET> <S3_PREFIX> <S3_OBJECT> <LOCAL_DIRECTORY> <LOCAL_FILENAME>
+```
 
 
+### 4. `s3_put_file_transfer.sh`
 
+This script is used to put a file up in an S3 bucket.
+
+#### Usage:
+```
+bash ./s3_put_file_transfer.sh <S3_BUCKET> <S3_PREFIX> <LOCAL_DIRECTORY> <LOCAL_FILENAME>
+```

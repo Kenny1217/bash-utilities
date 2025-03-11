@@ -14,7 +14,7 @@ S3_BUCKET="$1"
 S3_PREFIX="$2"
 S3_OBJECT="$3"
 
-S3_FULL_PATH="s3://$S3_BUCKET/$S3_PREFIX/$S3_OBJECT"
+S3_FULL_PATH="s3://$S3_BUCKET$S3_PREFIX$S3_OBJECT"
 
 if ! s3cmd del "$S3_FULL_PATH"; then
     echo "Failed to delete $S3_FULL_PATH"

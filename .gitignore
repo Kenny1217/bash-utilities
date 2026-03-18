@@ -1,0 +1,14 @@
+# Environment
+.venv
+*.env
+
+# Log file
+*.log
+
+# Mac OS
+.DS_STORE
+
+# Python
+*.pyc
+*.Python
+__pycache__/
